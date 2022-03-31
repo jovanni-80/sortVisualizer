@@ -96,9 +96,9 @@ def bubblesort(l):
 
         #set interval based on size
         if end == SMALL:
-            interval = 80
+            interval = 50
         elif end == MEDIUM:
-            interval = 30
+            interval = 20
         elif end == LARGE:
             interval = 10
 
