@@ -54,7 +54,7 @@ drawBarArr(screen, arr, green, 0)
 
 #final view loop
 displaying = True
-    
+
 #REMOVE THIS SECTION LATER
 while displaying:
     for event in pygame.event.get():

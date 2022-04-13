@@ -26,13 +26,16 @@ def isList(l):
 #draw the whole bar array
 def drawBarArr(screen, arr, color, interval):
     if isList(arr):
+
         size = len(arr)
         maxW, maxH = screen.get_width(), screen.get_height()
         barWidth = int(maxW)/size
+
         for j in range(size):
             i = arr[j]
             r = pygame.Rect(j*barWidth, maxH-i, barWidth, i)
             drawBar(screen, r, color)
+            pygame.display.flip()
             pygame.time.delay(interval)
 
 #erase and redraw two specific bars
@@ -57,13 +60,13 @@ def drawSwap(screen, arr, x, y):
     drawBar(screen, r_min, foreground)
     drawBar(screen, r_i, foreground)
 
-    #refresh the screen
+    #update the screen
     pygame.display.flip()
+
 
 #draw a single bar
 def drawBar(screen, r, color):
     pygame.draw.rect(screen, color, r)
-    pygame.display.flip()
 
 #print the starting menu
 def printMenu():
